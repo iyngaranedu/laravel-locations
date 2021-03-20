@@ -10,7 +10,7 @@ class CreateLaravelLocationsTable extends Migration
     {
         Schema::create('locations', function (Blueprint $table) {
             $table->id();
-            $table->string("short_name",3);
+            $table->string("short_name",3)->nullable();
             $table->string("name");
             $table->unsignedBigInteger('parent_id')->nullable();
             $table->timestamps();
