@@ -2,10 +2,10 @@
 
 namespace Iyngaran\Location;
 
+use Illuminate\Support\Facades\Route;
+use Iyngaran\Location\Commands\LocationCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Iyngaran\Location\Commands\LocationCommand;
-use Illuminate\Support\Facades\Route;
 
 class LocationServiceProvider extends PackageServiceProvider
 {
