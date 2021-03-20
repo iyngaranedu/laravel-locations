@@ -1,12 +1,12 @@
 <?php
 
-namespace Spatie\Skeleton\Commands;
+namespace Iyngaran\Location\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class LocationCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-locations';
 
     public $description = 'My command';
 
