@@ -10,10 +10,10 @@ Route::group(
         Route::get('/countries', LocationController::class)
             ->name('countries');
 
-        Route::get('/states/{country}', SubLocationController::class)
+        Route::get('/states/{location}', SubLocationController::class)
             ->name('states');
 
-        Route::get('/cities/{state}', SubLocationController::class)
+        Route::get('/cities/{location}', SubLocationController::class)
             ->name('cities');
     }
 );
