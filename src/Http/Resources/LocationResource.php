@@ -13,6 +13,7 @@ class LocationResource extends JsonResource
             'id' => $this->id,
             'short_name' => $this->short_name,
             'name' => $this->name,
+            'slug' => $this->slug,
             'parent_id' => $this->parent_id,
             'sub_locations' => $this->subLocations,
         ];
