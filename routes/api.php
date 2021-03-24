@@ -7,7 +7,13 @@ use Iyngaran\Location\Http\Controllers\SubLocationController;
 Route::group(
     ['prefix' => 'locations', 'as' => 'locations.'],
     function () {
-        Route::get('/countries', LocationController::class)
+        Route::get('/slug/{location:slug}', [LocationController::class,'showBySlug'])
+            ->name('locations.slug');
+
+        Route::get('/{location}', [LocationController::class,'show'])
+            ->name('locations.show');
+
+        Route::get('/countries', [LocationController::class,'index'])
             ->name('countries');
 
         Route::get('/states/{location}', SubLocationController::class)
