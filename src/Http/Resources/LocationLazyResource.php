@@ -14,7 +14,7 @@ class LocationLazyResource extends JsonResource
             'short_name' => $this->short_name,
             'name' => $this->name,
             'slug' => $this->slug,
-            'parent_id' => $this->parent_id
+            'parent_id' => $this->parent_id,
         ];
     }
 }
