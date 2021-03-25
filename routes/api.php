@@ -13,7 +13,7 @@ Route::group(
         Route::get('/countries', [LocationController::class,'index'])
             ->name('countries');
 
-        Route::get('/location/{location}', [LocationController::class,'show'])
+        Route::get('/{location}', [LocationController::class,'show'])
             ->name('locations.show');
 
         Route::get('/states/{location}', SubLocationController::class)
