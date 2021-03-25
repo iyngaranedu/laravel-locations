@@ -10,11 +10,11 @@ Route::group(
         Route::get('/slug/{location:slug}', [LocationController::class,'showBySlug'])
             ->name('locations.slug');
 
-        Route::get('/{location}', [LocationController::class,'show'])
-            ->name('locations.show');
-
         Route::get('/countries', [LocationController::class,'index'])
             ->name('countries');
+
+        Route::get('/location/{location}', [LocationController::class,'show'])
+            ->name('locations.show');
 
         Route::get('/states/{location}', SubLocationController::class)
             ->name('states');
