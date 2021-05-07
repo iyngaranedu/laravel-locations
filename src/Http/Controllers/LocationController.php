@@ -12,9 +12,9 @@ use Iyngaran\Location\Models\Location;
 
 class LocationController extends Controller
 {
-    public function index(Location $location): AnonymousResourceCollection
+    public function index(Location $location): JsonResponse
     {
-        return LocationResource::collection($location->where('parent_id', null)->get());
+        return response()->json(LocationResource::collection($location->where('parent_id', null)->get()));
     }
 
     public function show(Location $location): JsonResponse
